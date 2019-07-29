@@ -17,4 +17,5 @@ RUN apt-get update  -qq \
 
 RUN usermod -aG docker jenkins
 
-VOLUME /var/jenkins_home
+VOLUME /var/jenkins_home \
+       && /var/run/docker.sock:/var/run/docker.sock
